@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3 OMP_NUM_THREADS=12 torchrun --nproc-per-node=4 --master_port=2225 train.py --data-path /dataset/imagenet/ "$@"

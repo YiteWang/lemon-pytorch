@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3 OMP_NUM_THREADS=12 torchrun --nproc-per-node=4 --master_port=2222 main.py --model deit_small_patch16_224 --batch-size 256 --data-path /dataset/imagenet1k --output_dir /data/vit/expanded/ "$@"
